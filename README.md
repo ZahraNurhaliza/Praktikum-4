@@ -2,7 +2,7 @@
 
 ## Tugas Praktikum
 Buat Table pegawai dan isi datanya seperti berikut:
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawaipng)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai.png)
 
 ```python
 create database praktikum4;
@@ -28,60 +28,60 @@ values	('E001', 'Ferry', 'Gustiawan', 'ferry@yahoo.com', '07117059004', '2005-09
 		('E006', 'Lincoln', 'Burrows', 'linc@yahoo.com', '08527388432', '2008-09-01', 'L0006', 1750000, null);
 select * from Pegawai;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai1png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai1.png)
 
 1. Tampilkan pegawai yang gajinya bukan 2.000.000 dan 1.250.000 !
 ```python
 select * from Pegawai where gaji not in (2000000, 1250000);
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai2png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai2.png)
 
 2. Tampilkan pegawai yang tunjangannya NULL!
 ```python
 select * from Pegawai where tunjangan is null;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai3png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai3.png)
 
 3. Tampilkan pegawai yang tunjangannya tidak NULL!
 ```python
 select * from Pegawai where tunjangan is not null;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai4png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai4.png)
 
 4. Tampilkan/hitung jumlah baris/record tabel pegawai!
 ```python
 select COUNT(*) as jumlah_pegawai from Pegawai;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai5png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai5.png)
 
 5. Tampilkan/hitung jumlah total gaji di tabel pegawai!
 ```python
 select SUM(gaji) as total_gaji from Pegawai;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai6png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai6.png)
 
 6. Tampilkan/hitung rata-rata gaji pegawai!
 ```python
 select avg(gaji) as rata_rata_gaji from Pegawai;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai7png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai7.png)
 
 7. Tampilkan gaji terkecil!
 ```python
 select MIN(gaji) as gaji_terkecil from Pegawai;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai8png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai8.png)
 
 8. Tampilkan gaji terbesar!
 ```python
 select MAX(gaji) as gaji_terbesar from Pegawai;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai9png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Pegawai9.png)
 
 
 ## Tugas Praktikum
 Buat table hewan dan isi datanya seperti berikut:
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animalspng)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals.png)
 
 ```python
 create table Animals (
@@ -104,43 +104,43 @@ values ('p1', 'Puffball', 'Diane', 'Hamster', 'F'),
        ('p9', 'Slim', 'Benny', 'Snake', 'M');
 select * from Animals;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals1png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals1.png)
 
 1. Tampilkan jumlah hewan yang dimiliki setiap owner.
 ```python
 select owner, COUNT(*) as  jumlah_hewan from Animals group by owner;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals2png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals2.png)
 
 2. Tampilkan jumlah hewan berdasarkan spesies
 ```python
 select species, COUNT(*) as jumlah_hewan from Animals group by species;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals3png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals3.png)
 
 3. Tampilkan jumlah hewan berdasarkan jenis kelamin
 ```python
 select sex, COUNT(*) as jumlah_hewan from Animals group by sex;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals4png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals4.png)
 
 4. Tampilkan jumlah hewan berdasarkan spesies dan jenis kelamin
 ```python
 select species, sex, COUNT(*) as jumlah_hewan from Animals group by species, sex;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals5png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals5.png)
 
 5. Tampilkan jumlah hewan berdasarkan spesis (cat dan dog saja) dan jenis kelamin
 ```python
 select species, sex, COUNT(*) as jumlah_hewan from Animals where species in ('Cat', 'Dog') group by species, sex;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals6png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals6.png)
 
 6. Tampilkan jumlah hewan berdasarkan jenis kelamin yang diketahui saja
 ```python
 select sex, COUNT(*) as jumlah_hewan from Animals where sex is not null group by sex;
 ```
-![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals7png)
+![image](https://github.com/ZahraNurhaliza/Praktikum-4/blob/main/screenshot/Animals7.png)
 
 
 ## Kesimpulan
